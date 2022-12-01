@@ -100,7 +100,7 @@ class AuthInit(viewModel: viewModel, signInLauncher: ActivityResultLauncher<Inte
                         if(difLevelAmount[i] != 0){
                             t2[i] = (difLevelAmount[i].toDouble()/difLevelCount[i].toDouble()).roundToInt()
                         }
-                        if(freetimeCount[i] != 0){
+                        if(workPerncentageCount[i] != 0){
                             t3[i] = (workPerncentageAmount[i].toDouble()/workPerncentageCount[i].toDouble()).roundToInt()
                         }
                     }

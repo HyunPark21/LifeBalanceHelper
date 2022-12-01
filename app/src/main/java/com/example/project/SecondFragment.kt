@@ -37,6 +37,7 @@ class SecondFragment : Fragment() {
         binding.TimeEnjoyment.text = "You play ${viewModel.freetime.getValue()} hours today"
         binding.TimeEnjoyment.setOnClickListener {
             if(viewModel.timeSpent < 20) {
+                Log.d("XXXXX", viewModel.timeSpent.toString())
                 val check = viewModel.freetime.getValue()!! + 1
                 viewModel.freetime.setValue(check)
                 viewModel.timeSpent += 1
@@ -83,6 +84,7 @@ class SecondFragment : Fragment() {
         }
         viewModel.a.getFree(viewModel)
         viewModel.a.getDaily(viewModel)
+        Log.d("XXXXX", viewModel.timeSpent.toString())
     }
 
     override fun onDestroyView() {
