@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.project.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.project.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_SecondFragment_to_AddTaskFragment"
+            app:destination="@id/AddTaskFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_endDay"
+            app:destination="@id/endDay" />
+        <action
+            android:id="@+id/action_SecondFragment_to_graph"
+            app:destination="@id/graph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddTaskFragment"
+        android:name="com.example.project.AddTaskFragment"
+        android:label="Add Task Fragment"
+        tools:layout="@layout/addtask">
+        <action
+            android:id="@+id/action_AddTaskFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endDay"
+        android:name="com.example.project.endDay"
+        android:label="endDay" >
+        <action
+            android:id="@+id/action_endDay_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/graph"
+        android:name="com.example.project.graph"
+        android:label="graph" >
+        <action
+            android:id="@+id/action_graph_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+</navigation>
